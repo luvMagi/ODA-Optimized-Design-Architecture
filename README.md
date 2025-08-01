@@ -1,97 +1,63 @@
 # 🧠 ODA – Optimized Design Architecture
 
-> From one design, comes everything.  
-> 一生二，二生三，三生万物  
-> 一つの設計から、万の成果を。  
+> 一つの設計から、万の成果を。
 > 一を聞いて十を知る──ODAがすべてを自動で紡ぐ。
 
 ---
 
-## 🇬🇧 EN – Overview
+## 🌐 プロジェクト理念
 
-**ODA (Optimized Design Architecture)** is a modular design automation framework that transforms a single design definition into multiple system deliverables such as screen specifications, report definitions, and database models.
+**ODA（Optimized Design Architecture）** は、設計情報を一元管理し、**Web画面設計書、帳票定義、データベースモデル** など多様な成果物を自動生成できる、次世代の設計自動化プラットフォームです。
 
-### 🌐 Core Concept
-
-**Design once, generate all.**  
-Define once, and ODA will orchestrate the expansion into all required artifacts across UI, PDF reports, and database schema.
-
-### 🧩 Module System
-
-- **SEAD** – Screen Effective Assistant of Design  
-  - `ws2ddb`: Web screen to detailed design book generator  
-  - `spring back tracer`: Event & control linkage analyzer
-
-- **PREAD** – PDF Report Effective Assistant of Design  
-  - `magictouch`: Report item mapper  
-  - `sx2ddb`: SVF to detailed design book converter  
-  - `svf unit test csv generator`: CSV mock generator for SVF testing
-
-- **RETEAD** – Relation Transform Effective Assistant of Database  
-  - `ctlbv`: CSV to local view builder  
-  - `plsql convert to magichart`: Procedure → Flowchart translator  
-  - `procedure function relation overview`: Procedure-call dependency map  
-  - `table-book convertor`: Table to Excel schema converter  
-  - `diffanayzlie`: Database difference analyzer
+> **Design once, generate all.**  
+> 一度の定義で、複数の成果物へと展開し、設計の一貫性と開発効率、品質を同時に向上させます。
 
 ---
 
-## 🇨🇳 中文 – 项目简介
+## 🧩 モジュール構成
 
-**ODA（Optimized Design Architecture）** 是一套模块化的设计自动化平台，致力于实现“一次定义，多点生成”的系统开发理念，适用于画面设计书、报表输出定义、数据库建模等多种场景。
+ODAは目的別に以下の3領域で構成されています：
 
-### 🌐 核心理念
+### 1. 画面設計支援モジュール
 
-**一次设计，生成万物。**  
-通过统一的输入结构，自动扩展为 UI/报表/数据库等多种开发交付成果。
+- 画面機能、UI部品、イベント処理の定義を標準化  
+- 詳細設計書（Excelなど）を自動出力
 
-### 🧩 模块结构
+### 2. 帳票設計支援モジュール
 
-- **SEAD** – Screen Effective Assistant of Design  
-  - `ws2ddb`：Web 画面 → 详细设计书 生成器  
-  - `spring back tracer`：事件与控件联动回溯工具
+- レイアウト構造、CSV列、制御情報などを統一的に定義  
+- 帳票テンプレート、SVF設定、CSVテストデータなどを自動生成
 
-- **PREAD** – PDF Report Effective Assistant of Design  
-  - `magictouch`：报表项目字段映射工具  
-  - `sx2ddb`：SVF 报表 → 设计书 生成器  
-  - `svf unit test csv generator`：SVF 用 CSV 模拟数据生成器
+### 3. データベース設計支援モジュール
 
-- **RETEAD** – Relation Transform Effective Assistant of Database  
-  - `ctlbv`：CSV → 本地视图构建器  
-  - `plsql convert to magichart`：过程逻辑可视化转换器  
-  - `procedure function relation overview`：过程调用关系图谱  
-  - `table-book convertor`：表结构 → Excel设计书转换器  
-  - `diffanayzlie`：数据库差异分析器
+- ER構造からDDLへの変換、フィールドマッピング、差分分析に対応  
+- DB設計書、プロシージャ関連図、テーブル構造一覧などを出力可能
 
 ---
 
-## 🇯🇵 日本語 – プロジェクト紹介
+## 📁 活用シーン
 
-**ODA（Optimized Design Architecture）** は、ひとつの設計定義から多様な成果物を自動生成する設計自動化フレームワークです。画面設計書、帳票定義、DBモデリングなどに対応します。
-
-### 🌐 コア理念
-
-**一度の設計で、すべてを生成。**  
-設計情報を一元化し、UI・帳票・DBスキーマを自動展開します。
-
-### 🧩 モジュール構成
-
-- **SEAD** – Screen Effective Assistant of Design  
-  - `ws2ddb`：Web画面 → 詳細設計書 生成ツール  
-  - `spring back tracer`：イベント・コンポーネント関連解析
-
-- **PREAD** – PDF Report Effective Assistant of Design  
-  - `magictouch`：帳票項目とCSV項目のマッピング支援  
-  - `sx2ddb`：SVF → 詳細設計書自動変換  
-  - `svf unit test csv generator`：SVF用CSVモックデータ生成
-
-- **RETEAD** – Relation Transform Effective Assistant of Database  
-  - `ctlbv`：CSV → ローカルDBビュー作成  
-  - `plsql convert to magichart`：PL/SQL → フローチャート変換  
-  - `procedure function relation overview`：プロシージャ関係可視化  
-  - `table-book convertor`：テーブル構造 → Excel定義書変換  
-  - `diffanayzlie`：DB構造差分分析ツール
+- 💻 Webシステムの画面詳細設計書の一括作成  
+- 📄 帳票出力定義（SVF、CSV、制御情報）の自動生成  
+- 🗃 データベース設計（ER～DDL・構造差分）のドキュメント化  
+- 🧠 AI支援型設計基盤との統合（Copilot等の連携に対応）  
+- 📦 Excel / Markdown / XML等、様々な設計書フォーマットへの対応
 
 ---
 
-> 📣 Contact me if you want ODA to support your format, system, or workflow.
+## 🏷 プロジェクトスローガン
+
+> **Design once, generate all.**  
+> 一つの定義から、多様な成果へ。
+
+---
+
+## 🛠 技術タグ
+
+`#設計自動化` `#システムアーキテクチャ` `#画面設計支援`  
+`#帳票定義支援` `#DBモデリング支援` `#テンプレートエンジン`  
+`#Excel自動出力` `#AI設計支援`
+
+---
+
+ご要望に応じて、ODAをお客様の設計フォーマットや業務プロセスに合わせてカスタマイズすることが可能です。ぜひお気軽にご相談ください。
