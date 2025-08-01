@@ -1,55 +1,97 @@
 # 🧠 ODA – Optimized Design Architecture
-> Design once, generate all.
 
-**ODA（Optimized Design Architecture）** 是一个面向现代系统开发的设计自动化平台。通过统一的数据输入结构、模板驱动引擎与模块化输出策略，ODA 能够将一次设计，自动扩展为多种输出：**画面详细设计书、报表定义、数据库建模** 等。
-
----
-
-## 🌐 项目理念
-
-- ✏️ **Design once**：一套设计输入定义，涵盖 UI、报表、数据库三位一体。
-- ⚙️ **Generate all**：自动生成详细设计书、SQL 建表语句、报表模板等开发交付物。
-- 🔁 **Template Driven**：通过可扩展的模板体系，支持各类项目规范。
-- 🤝 **模块协同**：各模块（SEAD / PREAD / RETEAD）数据共享、逻辑联动。
+> From one design, comes everything.  
+> 一生二，二生三，三生万物  
+> 一つの設計から、万の成果を。  
+> 一を聞いて十を知る──ODAがすべてを自動で紡ぐ。
 
 ---
 
-## 🧩 模块体系
+## 🇬🇧 EN – Overview
 
-| 模块名 | 全称 | 职能说明 |
-|--------|------|----------|
-| **SEAD** | Screen Effective Assistant of Design | 支持画面项目信息、组件布局、事件设定等自动化生成 |
-| **PREAD** | PDF Report Effective Assistant of Design | 支持账票定义、CSV 对应、SVF 结构输出 |
-| **RETEAD** | Relation Transform Effective Assistant of Database | 支持 ER 分析、表结构建模、字段映射、SQL 自动生成 |
+**ODA (Optimized Design Architecture)** is a modular design automation framework that transforms a single design definition into multiple system deliverables such as screen specifications, report definitions, and database models.
 
----
+### 🌐 Core Concept
 
-## 📁 应用场景
+**Design once, generate all.**  
+Define once, and ODA will orchestrate the expansion into all required artifacts across UI, PDF reports, and database schema.
 
-- 💻 Web 系统 UI详细设计书批量生成  
-- 📄 报表输出定义（SVF / CSV对照表 / 控制信息）快速生成  
-- 🗃 数据库建模（ER转DDL / 字段映射）统一生成  
-- 🧠 自动化生成器开发基础框架（适配 Copilot、AI辅助）  
-- 📦 模板模块可扩展，支持定制各类输出格式（Excel / Markdown / JSON / XML）
+### 🧩 Module System
 
----
+- **SEAD** – Screen Effective Assistant of Design  
+  - `ws2ddb`: Web screen to detailed design book generator  
+  - `spring back tracer`: Event & control linkage analyzer
 
-## 🏷 项目口号
+- **PREAD** – PDF Report Effective Assistant of Design  
+  - `magictouch`: Report item mapper  
+  - `sx2ddb`: SVF to detailed design book converter  
+  - `svf unit test csv generator`: CSV mock generator for SVF testing
 
-> **Design once, generate all.**  
-> 从“统一定义”出发，实现“多点输出”的系统设计革新。
-
----
-
-## 🛠 技术关键词（Tags）
-
-`#DesignAutomation` `#DatabaseModeling` `#UIFlow` `#ReportGeneration`  
-`#TemplateEngine` `#ArchitectureTooling` `#Python` `#AI辅助`
+- **RETEAD** – Relation Transform Effective Assistant of Database  
+  - `ctlbv`: CSV to local view builder  
+  - `plsql convert to magichart`: Procedure → Flowchart translator  
+  - `procedure function relation overview`: Procedure-call dependency map  
+  - `table-book convertor`: Table to Excel schema converter  
+  - `diffanayzlie`: Database difference analyzer
 
 ---
 
-## 📌 示例流程（略）
+## 🇨🇳 中文 – 项目简介
 
-（可视化流程图示，或你后续让我加的具体输入输出示例）
+**ODA（Optimized Design Architecture）** 是一套模块化的设计自动化平台，致力于实现“一次定义，多点生成”的系统开发理念，适用于画面设计书、报表输出定义、数据库建模等多种场景。
+
+### 🌐 核心理念
+
+**一次设计，生成万物。**  
+通过统一的输入结构，自动扩展为 UI/报表/数据库等多种开发交付成果。
+
+### 🧩 模块结构
+
+- **SEAD** – Screen Effective Assistant of Design  
+  - `ws2ddb`：Web 画面 → 详细设计书 生成器  
+  - `spring back tracer`：事件与控件联动回溯工具
+
+- **PREAD** – PDF Report Effective Assistant of Design  
+  - `magictouch`：报表项目字段映射工具  
+  - `sx2ddb`：SVF 报表 → 设计书 生成器  
+  - `svf unit test csv generator`：SVF 用 CSV 模拟数据生成器
+
+- **RETEAD** – Relation Transform Effective Assistant of Database  
+  - `ctlbv`：CSV → 本地视图构建器  
+  - `plsql convert to magichart`：过程逻辑可视化转换器  
+  - `procedure function relation overview`：过程调用关系图谱  
+  - `table-book convertor`：表结构 → Excel设计书转换器  
+  - `diffanayzlie`：数据库差异分析器
 
 ---
+
+## 🇯🇵 日本語 – プロジェクト紹介
+
+**ODA（Optimized Design Architecture）** は、ひとつの設計定義から多様な成果物を自動生成する設計自動化フレームワークです。画面設計書、帳票定義、DBモデリングなどに対応します。
+
+### 🌐 コア理念
+
+**一度の設計で、すべてを生成。**  
+設計情報を一元化し、UI・帳票・DBスキーマを自動展開します。
+
+### 🧩 モジュール構成
+
+- **SEAD** – Screen Effective Assistant of Design  
+  - `ws2ddb`：Web画面 → 詳細設計書 生成ツール  
+  - `spring back tracer`：イベント・コンポーネント関連解析
+
+- **PREAD** – PDF Report Effective Assistant of Design  
+  - `magictouch`：帳票項目とCSV項目のマッピング支援  
+  - `sx2ddb`：SVF → 詳細設計書自動変換  
+  - `svf unit test csv generator`：SVF用CSVモックデータ生成
+
+- **RETEAD** – Relation Transform Effective Assistant of Database  
+  - `ctlbv`：CSV → ローカルDBビュー作成  
+  - `plsql convert to magichart`：PL/SQL → フローチャート変換  
+  - `procedure function relation overview`：プロシージャ関係可視化  
+  - `table-book convertor`：テーブル構造 → Excel定義書変換  
+  - `diffanayzlie`：DB構造差分分析ツール
+
+---
+
+> 📣 Contact me if you want ODA to support your format, system, or workflow.
